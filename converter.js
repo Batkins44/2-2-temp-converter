@@ -1,11 +1,9 @@
 function toCelsius (f) {
 c = +(((f-32)/1.8).toFixed(2));
-console.log(c);
 }
 
 function toFahrenheit (c) {
 f = +(((c*1.8)+32).toFixed(2));
-console.log(f);
 }
 
 function clearText (){
@@ -36,7 +34,6 @@ var clear = document.getElementById("clear-btn")
 function determineConverter (clickEvent) {
     if(document.getElementById('cel-to-fahr').checked) {
         var temp = userInput();
-        console.log(temp);
         toFahrenheit(temp);
         placement.innerHTML = `<font color="green"><b>${f}</b></font> fahrenheit`;
         if(f > 90){
@@ -58,7 +55,6 @@ function determineConverter (clickEvent) {
         if(c < 0){
           placement.innerHTML = `<font color="blue"><b>${c}</b></font> celsius`;
         };
-  console.log("event", clickEvent);
 }
 }
 // Assign a function to be executed when the button is clicked
